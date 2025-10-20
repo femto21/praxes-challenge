@@ -18,10 +18,13 @@ https://youtu.be/PRqdKjtn5tM
 - dependencies are included in the pom.xml file
 
 - This project uses H2 in-memory database.
-  To access the console, go to localhost:8080/h2-console
+  To access the console,
+  go to localhost:8080/h2-console
 
   jdbc url: jdbc:h2:file:./data/consultationdb
+
   username: sa
+
   password: (leave blank)
 
 - For sample data, paste the script from h2dbscript.txt in the root folder in the space provided and click run
@@ -137,7 +140,7 @@ https://youtu.be/PRqdKjtn5tM
 
 ### H2 console can be used to verify message storage directly
 
-#### **Architecture Decisions**
+# **Architecture Decisions**
 
 **Data Model:**
 
