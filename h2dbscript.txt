@@ -1,0 +1,40 @@
+-- Drop table if exists.
+DROP TABLE IF EXISTS message;
+DROP TABLE IF EXISTS consultation;
+
+-- Create messages and consultations tables
+CREATE TABLE message (
+  id INT PRIMARY KEY,
+  consultation_id INT,
+  author VARCHAR(255),
+  author_role VARCHAR(45),
+  content VARCHAR(255),
+  timestamp DATETIME
+);
+
+CREATE TABLE consultation (
+  consultation_id INT PRIMARY KEY,
+  doctor VARCHAR(255),
+  patient VARCHAR(255)
+  );
+
+-- Inserting data
+INSERT INTO message (id, consultation_id, author, author_role, content, timestamp)
+VALUES
+(1, 1, 'Dr. Smith', 'doctor', 'Hello, how are you feeling today?', '2025-10-18T10:00:00Z'),
+(2, 1, 'John Doe', 'patient', 'I am feeling a bit better, doctor. Still have a slight cough though.', '2025-10-18T10:02:00Z'),
+(3, 1, 'Dr. Smith', 'doctor', 'That is good to hear. Continue your medication for another week.', '2025-10-18T10:05:00Z'),
+(4, 2, 'Dr. Brown', 'doctor', 'Hello, how are you?', '2025-10-18T12:00:00Z'),
+(5, 2, 'Jane Doe', 'patient', 'Not too bad', '2025-10-18T12:02:00Z');
+(6, 1, 'Dr. Smith', 'doctor', 'Did you take your medicine?', '2025-10-18T10:10:00Z'),
+(7, 1, 'John Doe', 'patient', 'I am going to', '2025-10-18T10:15:00Z'),
+(8, 1, 'Dr. Smith', 'doctor', 'alright', '2025-10-18T10:06:00Z'),
+(9, 2, 'Dr. Brown', 'doctor', 'still feeling dizzy?', '2025-10-18T12:08:00Z'),
+(10, 2, 'Jane Doe', 'patient', 'yes', '2025-10-18T12:16:00Z');
+
+
+
+INSERT INTO consultation (consultation_id, doctor, patient)
+VALUES
+(1, 'Dr. Smith', 'John Doe'),
+(2, 'Dr. Brown', 'Jane Doe');
