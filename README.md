@@ -26,6 +26,8 @@ https://youtu.be/PRqdKjtn5tM
 
 - For sample data, paste the script from h2dbscript.txt in the root folder in the space provided and click run
 
+- For the frontend, just use "npm install" to install the necessary packages, followed by "npm run dev"
+
 #### **API Documentation**
 
 - All API endpoints are prefixed with (http://localhost:8080/api/consultation)
