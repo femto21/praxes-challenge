@@ -25,7 +25,7 @@ VALUES
 (2, 1, 'John Doe', 'patient', 'I am feeling a bit better, doctor. Still have a slight cough though.', '2025-10-18T10:02:00Z'),
 (3, 1, 'Dr. Smith', 'doctor', 'That is good to hear. Continue your medication for another week.', '2025-10-18T10:05:00Z'),
 (4, 2, 'Dr. Brown', 'doctor', 'Hello, how are you?', '2025-10-18T12:00:00Z'),
-(5, 2, 'Jane Doe', 'patient', 'Not too bad', '2025-10-18T12:02:00Z');
+(5, 2, 'Jane Doe', 'patient', 'Not too bad', '2025-10-18T12:02:00Z'),
 (6, 1, 'Dr. Smith', 'doctor', 'Did you take your medicine?', '2025-10-18T10:10:00Z'),
 (7, 1, 'John Doe', 'patient', 'I am going to', '2025-10-18T10:15:00Z'),
 (8, 1, 'Dr. Smith', 'doctor', 'alright', '2025-10-18T10:06:00Z'),

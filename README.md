@@ -140,6 +140,8 @@ https://youtu.be/PRqdKjtn5tM
 
 ### H2 console can be used to verify message storage directly
 
+### Please restart the server after running the database script so that everything maps properly
+
 # **Architecture Decisions**
 
 **Data Model:**
