@@ -182,17 +182,17 @@ We can also index the timestamps for faster sorting of chat messages by time.
 I was very experienced in node.js for backend API development already. Since one of the main job requirements for this co-op position was Java, I really wanted to show my adaptability and flexibility so I went with Spring Boot. I had been learning Spring Boot recently from Udemy, and this was a good opportunity to test out a sample backend implementation.
 But apart from my own personal reasons, Spring Boot (Java) by default has a very solid ecosystem, as well as support for rapid development. This coupled with Java's independence and OOP modularity makes it a very good tech stack for backend development.
 
-As for the optional frontend, I just went with a classic TypeSscript + React combo. TS helps with type safety and avoiding errors during runtime. React's ability to reuse components makes frontend development much faster and efficient.
+As for the optional frontend, I just went with a classic TypeScript + React combo. TS helps with type safety and avoiding errors during runtime. React's ability to reuse components makes frontend development much faster and efficient.
 
-For storage, I went with H2 because the dependencies that Spring Boot providse for its integration are very simple and straightforward. It can be used for an in-memory database which makes it ideal for this use case.
+For storage, I went with H2 because the dependencies that Spring Boot provides for its integration are very simple and straightforward. It can be used for an in-memory database which makes it ideal for this use case.
 
-Talking about tradeoffs, since H2 is only good for local development I had to avoid having to setup the entire PostgreSQL database server in order to save time. Another trade-off was that the models was very simplified - messages were storing the consultationId of pre-existing Consultation entities only that were added while running the H2 script. Although this was not a mandatory requirement, I could have worked on the REST APIs for creating new consultations as well.
+Talking about tradeoffs, since H2 is only good for local development I had to avoid having to setup the entire PostgreSQL database server in order to save time. Another trade-off was that the model was very simplified - messages were storing the consultationId of pre-existing Consultation entities only that were added while running the H2 script. Although this was not a mandatory requirement, I could have worked on the REST APIs for creating new consultations as well.
 
 ### **"Making This Production-Ready"**
 
 From a security perspective, we can use Json Web tokens for handling authorization and authentication. For example, before accessing the chat window, there can be a login screen where only people who have the correct credentials can access the application. Another thing we can do is to sanitize the input fields to avoid SQL injection attacks. If we are using the cloud, we can also use their robust storage services for all the data and ensure that it is encrypted during rest and transit.
 
-For performance, one feature that I could have worked on was to include pagination in the chat window. This would have ensured that only a few messagse are loaded at a time (faster speed) and the rest are asynchronously loaded as the user tries to view them. The database queries could have also been optimized more if we were to index fields like timestamp (in case of the chronological order implementation)
+For performance, one feature that I could have worked on was to include pagination in the chat window. This would have ensured that only a few messages are loaded at a time (faster speed) and the rest are asynchronously loaded as the user tries to view them. The database queries could have also been optimized more if we were to index fields like timestamp (in case of the chronological order implementation)
 
 For reliability, the error handling could have been significantly improved for a lot of specific cases. For example the timestamp field could have been made to throw an appropriate error if the format was not appropriate.
 
